@@ -1,0 +1,53 @@
+@import "../../../assets/styles/mixins";
+
+.rm-modal__body.rm-modal__body--signup {
+  padding: 30px 15px;
+  @include portrait {
+    padding: 45px 65px 45px 45px;
+  }
+}
+
+.rm-modal__body--signup {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  max-height: 100vh;
+  overflow-y: scroll;
+
+  @include portrait {
+    flex-direction: row;
+  }
+}
+
+.signup-modal__content {
+  width: 100%;
+  text-align: left;
+  order: 2;
+  @include portrait {
+    width: 560px;
+    order: 1;
+  }
+}
+
+.signup-modal__form-section {
+  width: 100%;
+  order: 1;
+  @include portrait {
+    width: 360px;
+    order: 2;
+  }
+}
+
+.signup__app-feature {
+  display: flex;
+  margin-bottom: 2rem;
+  padding-right: 1rem;
+
+  @include portrait {
+    padding-right: 0;
+    width: 435px;
+    margin-bottom: 45px;
+  }
+}

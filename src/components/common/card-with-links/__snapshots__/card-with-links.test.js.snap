@@ -1,0 +1,11 @@
+exports[`test renders correctly with default params 1`] = `
+<Card
+  className="card-with-links">
+  <a
+    className="card-with-links__link"
+    href="#"
+    target="_blank">
+    link
+  </a>
+</Card>
+`;

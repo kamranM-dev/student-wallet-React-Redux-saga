@@ -1,0 +1,10 @@
+@import "../../../assets/styles/mixins";
+
+.signup-info-title {
+  text-align: center;
+  @include textXXXLarge;
+
+  @include portrait {
+    text-align: left;
+  }
+}

@@ -1,0 +1,81 @@
+@import "../../../assets/styles/mixins";
+$headerHeightPortrait: 80px;
+$headerHeightMobile: 50px;
+$logoHeightMobile: 40px;
+
+.page-header {
+  border: 1px solid #e6ebee;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  flex-direction: column;
+  height: $headerHeightMobile;
+
+  .app-logo {
+    height: $logoHeightMobile;
+    cursor: pointer;
+  }
+
+  @include portrait {
+    padding-left: 50px;
+    padding-right: 50px;
+    flex-direction: row;
+    height: $headerHeightPortrait;
+  }
+  .left {
+    @include mobile {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .fa-bars {
+      display: block;
+      font-size: 30px;
+      line-height: $headerHeightMobile;
+      margin-right: 5px;
+      cursor: pointer;
+      @include portrait {
+        display: none;
+      }
+    }
+  }
+  .right-links {
+    font-weight: normal;
+    @include mobile {
+      width: 100%;
+      position: absolute;
+      top: $headerHeightMobile;
+      left: 0;
+      border-top: 1px solid #eee;
+      z-index: 3;
+      li {
+        border-bottom: 1px solid #eee;
+        height: $headerHeightMobile;
+        line-height: $headerHeightMobile;
+        background: white;
+        font-size: 1.6rem;
+
+        button {
+          text-align: left;
+          width: 100%;
+          background: white;
+          color: black;
+          border-radius: 0;
+          padding-left: 10px;
+        }
+      }
+    }
+
+    @include portrait {
+      display: flex;
+    }
+  }
+}
+
+.page-header .right-links .sw-button:first-of-type {
+  margin-right: 5px;
+}

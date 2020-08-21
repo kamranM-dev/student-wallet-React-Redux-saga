@@ -1,0 +1,17 @@
+@import "../../../assets/styles/typography";
+.auth-form__title {
+  height: 50px;
+  line-height: 50px;
+  border-bottom: 1px solid #d8e1e6;
+  background-color: white;
+  text-transform: uppercase;
+  @include textLarge;
+  @extend .font-secondary;
+}
+
+@include portrait {
+  .auth-form__title {
+    height: 72px;
+    line-height: 72px;
+  }
+}

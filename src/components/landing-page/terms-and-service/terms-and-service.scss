@@ -1,0 +1,38 @@
+@import "../../../assets/styles/mixins";
+
+.how-it-works {
+    padding-top: 9.5rem;
+}
+
+.how-it-works .text-xxxlarge {
+    margin-bottom: 68px;
+}
+
+.how-it-works__cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 50px;
+
+    @include portrait {
+        flex-direction: row;
+        margin-bottom: 150px;
+    }
+}
+
+.how-it-works__image {
+    height: 300px;
+    width: 330px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.how-it-works__application {
+    background-image: url('../../../assets/images/Application.png');
+}
+.how-it-works__scholarship {
+    background-image: url('../../../assets/images/We-search-for-compatible-scholarshiop.png');
+}
+.how-it-works__apply {
+    background-image: url('../../../assets/images/We-apply-for-you.png');
+}

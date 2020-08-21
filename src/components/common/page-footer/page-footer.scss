@@ -1,0 +1,120 @@
+@import "../../../assets/styles/mixins";
+
+.landing-footer {
+  background-color: #013e6a;
+  color: #ffffff;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  font-size: 17px;
+  @include portrait {
+    padding-top: 88px;
+  }
+
+  a {
+    cursor: pointer;
+    transition: 0.3s color;
+    color: #fff;
+
+    &:hover {
+      color: rgba(255, 255, 255, 0.6);
+    }
+  }
+}
+
+.landing-footer-columns {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+  flex-direction: column;
+
+  @include portrait {
+    flex-direction: row;
+    margin-bottom: 70px;
+  }
+}
+
+.landing-footer__column-title {
+  height: 60px;
+  line-height: 60px;
+  font-size: 3rem;
+
+  @include portrait {
+    font-size: 1.7rem;
+  }
+}
+
+.text-with-icon {
+  display: flex;
+}
+
+.landing-footer__column {
+  text-align: center;
+  width: 100%;
+  margin-top: 30px;
+  @include portrait {
+    text-align: left;
+    margin-top: 0;
+    &:first-of-type {
+      width: 315px;
+    }
+    &:nth-of-type(2) {
+      width: 230px;
+    }
+    &:last-of-type {
+      width: 170px;
+    }
+  }
+
+  .text-with-icon {
+    margin-bottom: 0;
+    justify-content: center;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    @include portrait {
+      justify-content: flex-start;
+      margin-bottom: 20px;
+    }
+  }
+
+  i {
+    width: 25px;
+    font-size: 20px;
+    display: inline-block;
+    position: relative;
+    line-height: 1.4;
+
+    &.fa-envelope {
+      font-size: 13px;
+      line-height: 2;
+    }
+  }
+
+  &.stay-connected i {
+    font-size: 2rem;
+  }
+}
+
+.landing-footer__column-title {
+
+}
+
+.landing-footer__column-content {
+  line-height: 1.7;
+  padding: 0 10px;
+  @include portrait {
+    margin-top: 10px;
+    padding: 0;
+  }
+}
+
+.landing-footer__bottom-links {
+  margin-top: 40px;
+
+  li {
+    display: inline-block;
+    margin-right: 35px;
+  }
+}

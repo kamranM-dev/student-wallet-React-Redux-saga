@@ -1,0 +1,65 @@
+@import "./mixins";
+
+.rm-overlay {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background-color: rgba(8, 74, 125, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rm-modal {
+  position: relative;
+  border: none;
+  background: #fff;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  border-radius: 4px;
+  outline: none;
+  padding: 0;
+  margin: 0 auto;
+  width: 100%;
+  @include portrait {
+    min-width: 768px;
+    max-width: 948px;
+    width: 70%;
+  }
+
+  .header {
+    height: 50px;
+    position: relative;
+  }
+}
+
+.rm-modal__signup {
+  max-width: none;
+  min-width: auto;
+}
+
+.rm-modal__close {
+  position: absolute;
+  right: 13px;
+  top: 0;
+  opacity: 0.6;
+  cursor: pointer;
+  transition: opacity 0.3s;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.rm-modal__body {
+  padding: 0 0 2rem 0;
+  font-weight: lighter;
+  text-align: center;
+}
+
+.fa-times-thin:before {
+  content: '\00d7';
+}
+

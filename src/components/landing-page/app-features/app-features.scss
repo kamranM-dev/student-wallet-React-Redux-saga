@@ -1,0 +1,37 @@
+@import "../../../assets/styles/mixins";
+.app-features {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    @include portrait {
+        flex-direction: row;
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+}
+
+.app-feature__image {
+    height: 230px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 20px;
+
+    @include portrait {
+        width: 330px;
+        margin-top: 0;
+    }
+}
+
+.app-feature__scholarship {
+    background-image: url('../../../assets/images/Scholarship-database.jpg');
+}
+.app-feature__campus {
+    background-image: url('../../../assets/images/Campus-explorer.jpg');
+}
+.app-feature__opportunities {
+    background-image: url('../../../assets/images/Student-opportunities.jpg');
+}

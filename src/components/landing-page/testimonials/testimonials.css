@@ -1,0 +1,8 @@
+.app-testimonials {
+    padding-top: 100px;
+    padding-bottom: 64px;
+}
+
+.app-testimonial-user1 {
+    background-image: url('../../../assets/images/testimonial-user.png');
+}

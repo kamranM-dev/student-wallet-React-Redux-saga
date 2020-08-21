@@ -1,0 +1,47 @@
+@import "../../../assets/styles/mixins";
+
+.sidebar-toggle {
+  width: 30px;
+  height: 30px;
+  background: #8bc53f;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  cursor: pointer;
+
+  i {
+    position: relative;
+    &.fa-chevron-right {
+      top: 1px;
+      left: 1px;
+    }
+  }
+}
+
+.dashboard__side-bar {
+  position: absolute;
+  display: flex;
+  z-index: 2;
+  left: -230px;
+  transition: transform 0.5s ease;
+  @include portrait {
+    display: none;
+  }
+
+  &.displayed {
+    transform: translateX(230px);
+    .sidebar-toggle {
+      transform: rotateY(-180deg);
+    }
+  }
+}
+
+.dashboard__sidebar-content {
+  transition: 0.3s all;
+  width: 230px;
+  background: #f0f6f9;
+  margin-right: 20px;
+  padding: 20px 25px;
+}

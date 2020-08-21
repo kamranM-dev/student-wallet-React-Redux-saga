@@ -1,0 +1,35 @@
+@import "../../../assets/styles/mixins";
+
+.getting-started-form {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+
+    @include portrait {
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: auto;
+    }
+
+    .input-field-container {
+        width: 100%;
+        margin-bottom: 20px;
+
+        @include portrait {
+            margin-right: 20px;
+            width: 368px;
+            margin-bottom: 0;
+        }
+    }
+
+    button {
+        width: 100%;
+        @include portrait {
+            width: 215px;
+        }
+    }
+}

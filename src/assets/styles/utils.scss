@@ -1,0 +1,13 @@
+@import "mixins";
+
+.hide-mobile {
+  @include mobile {
+    display: none;
+  }
+}
+
+.hide-tablet {
+  @include portrait {
+    display: none;
+  }
+}

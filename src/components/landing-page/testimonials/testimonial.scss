@@ -1,0 +1,28 @@
+@import "../../../assets/styles/mixins";
+
+.app-testimonial-container .testimonial-image {
+    background-image: url('../../../assets/images/testimonial-user.png');
+    height: 130px;
+    width: 130px;
+    position: absolute;
+    top: -65px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.app-testimonial-container {
+    border: 5px solid #f0f8fd;
+    margin: 10px;
+    position: relative;
+    padding: 80px 40px;
+
+    @include portrait {
+        width: 928px;
+        margin: 0 auto;
+    }
+}
+
+

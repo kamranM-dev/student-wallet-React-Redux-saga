@@ -1,0 +1,30 @@
+@import "../../../../assets/styles/mixins";
+
+$bannerFooterHeight: 52px;
+
+.banner-footer-item i {
+    line-height: $bannerFooterHeight;
+    position: relative;
+    top: -2px;
+    margin-right: 0.5rem;
+}
+
+.banner-footer-item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.3rem;
+
+    @include portrait {
+        height: $bannerFooterHeight;
+        line-height: $bannerFooterHeight;
+        font-size: 1.6rem;
+    }
+}
+
+.banner-footer-item__text {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}

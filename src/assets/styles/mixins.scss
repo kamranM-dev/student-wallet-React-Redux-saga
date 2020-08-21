@@ -1,0 +1,71 @@
+@import "./variables";
+
+@mixin desktop() {
+  @media only screen and (min-width: 960px) {
+    @content;
+  }
+}
+
+@mixin portrait() {
+  @media only screen and (min-width: 720px) {
+    @content;
+  }
+}
+
+@mixin mobile() {
+  @media only screen and (max-width: 720px) {
+    @content;
+  }
+}
+
+@mixin textSmall() {
+  font-size: 1.4rem;
+}
+
+@mixin textNormal() {
+  font-size: 1.6rem;
+}
+
+@mixin textMedium() {
+  font-size: 1.8rem;
+}
+
+@mixin textLarge() {
+  font-size: 2.2rem;
+}
+
+@mixin textXLarge() {
+  font-size: 2.6rem;
+}
+
+@mixin textXXLarge() {
+  font-size: 3rem;
+}
+
+@mixin textXXXLarge() {
+  font-size: 3.4rem;
+}
+
+@mixin textCenter() {
+  text-align: center;
+}
+
+@mixin textLeft() {
+  text-align: left;
+}
+
+@mixin textBold() {
+  font-weight: bold;
+}
+
+@mixin textUpper() {
+  text-transform: uppercase;
+}
+
+@mixin textError() {
+  color: $errorColor;
+}
+
+@mixin textGray() {
+  color: $grayColor;
+}

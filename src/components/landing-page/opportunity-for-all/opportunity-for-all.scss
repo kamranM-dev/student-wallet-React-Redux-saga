@@ -1,0 +1,46 @@
+@import "../../../assets/styles/mixins";
+@import "../../../assets/styles/variables";
+
+.opportunity-for-all {
+    @include portrait {
+        height: 676px;
+        width: 100%;
+        color: white;
+        position: relative;
+    }
+}
+
+.opportunity-for-all .image {
+    display: none;
+    @include portrait {
+        display: block;
+        background-image: url('../../../assets/images/Opportunity-for-all-BG.jpg');
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+.opportunity-for-all__text-section .content {
+    margin: 25px 0;
+}
+
+.opportunity-for-all__text-section {
+    color: $primaryColor;
+    text-align: center;
+
+    @include portrait {
+        background-color: rgba(0, 0, 0, 0.4);
+        height: 495px;
+        width: 487px;
+        position: absolute;
+        top: 100px;
+        right: 288px;
+        padding: 40px;
+        color: white;
+        text-align: left;
+    }
+}

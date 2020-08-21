@@ -1,0 +1,30 @@
+{
+  "parser": "babel-eslint",
+  "extends": ["standard", "plugin:react/recommended"],
+  "plugins": [
+    "standard",
+    "promise"
+  ],
+  "globals": {
+    "sinon": true,
+    "expect": true,
+    "document": true,
+    "window": true
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "mocha": true,
+    "es6": true
+  },
+  "rules": {
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "semi": [2, "always"],
+    "no-var": [1],
+    "no-console": [0],
+    "prefer-const": [1],
+    "handle-callback-err": [0],
+    "camelcase": [0],
+    "space-before-function-paren": [0]
+  }
+}

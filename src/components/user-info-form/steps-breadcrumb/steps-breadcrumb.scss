@@ -1,0 +1,94 @@
+@import "../../../assets/styles/mixins";
+@import "../../../assets/styles/animations";
+
+$breadcrumbSize: 8px;
+$breadcrumbOuterSize: 25px;
+$green: #8dc449;
+
+.steps-breadcrumb {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 85px;
+  background: #f8fafc;
+  font-weight: normal;
+  user-select: none;
+  @include portrait { }
+}
+
+.steps-breadcrumb__step {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:after {
+    content: '';
+    width: 80px;
+    height: 2px;
+    background: #b1b1b1;
+    margin-left: 10px;
+    margin-right: 10px;
+
+    @include portrait {
+      width: 100px;
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+  }
+
+  &:last-of-type:after {
+    content: none;
+  }
+
+  .step-indicator {
+    // margin-right: 10px;
+
+    .inner {
+      background: #718482;
+      width: $breadcrumbSize;
+      height: $breadcrumbSize;
+      border-radius: 100%;
+    }
+
+    .outer {
+      width: $breadcrumbOuterSize;
+      height: $breadcrumbOuterSize;
+      border-radius: 100%;
+      border: 1px solid transparent;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .step-text {
+    display: none;
+    cursor: pointer;
+
+    @include portrait {
+      display: inline-block;
+      padding-left: 10px;
+    }
+  }
+}
+
+.steps-breadcrumb__active, .steps-breadcrumb__completed {
+  color: $green;
+
+  .step-indicator .inner {
+    background: $green;
+  }
+}
+
+.steps-breadcrumb__active {
+  .step-indicator .inner {
+    background: $green;
+  }
+  .step-indicator .outer {
+    border-color: $green;
+    animation-name: borderShow;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+}

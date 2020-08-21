@@ -1,0 +1,24 @@
+@import "../../../assets/styles/mixins";
+
+.scholarships-toolbar {
+  display: flex;
+  justify-content: space-between;
+
+  @include mobile {
+    flex-direction: column;
+  }
+
+  .ui.selection.dropdown {
+    margin-bottom: 1rem;
+
+    @include portrait {
+      margin-bottom: 2rem;
+    }
+  }
+
+  .filter-options {
+    .ui.selection.dropdown:first-of-type {
+      margin-right: 2rem;
+    }
+  }
+}

@@ -1,0 +1,47 @@
+@import "../../../assets/styles/mixins";
+.banner-section {
+    height: 610px;
+    width: 100%;
+    color: white;
+    position: relative;
+    text-align: center;
+}
+
+.banner-section .image {
+    background: url('../../../assets/images/home-hero-image.png');
+    height: 610px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.banner-text {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.banner-title {
+    width: 100%;
+    @include portrait {
+        width: 585px;
+    }
+}
+
+.banner-secondary {
+    margin-top: 3rem;
+    line-height: 1.5;
+    margin-bottom: 3.5rem;
+    width: 100%;
+    @include portrait {
+        width: 500px;
+    }
+}

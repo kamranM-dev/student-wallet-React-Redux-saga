@@ -1,0 +1,49 @@
+@import "../../assets/styles/mixins";
+@import "../../assets/styles/animations";
+
+.signup-user-info {
+  .steps-section {
+    padding: 2rem;
+    @include portrait {
+      width: 750px;
+      margin: 0 auto;
+    }
+  }
+}
+
+.user-info-form__step-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .step-1 & {
+    justify-content: flex-end;
+  }
+}
+
+.user-info-form__step {
+  animation-name: slidein;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+}
+
+.sw-date-picker {
+  &.input-field {
+    position: relative;
+
+    input {
+      padding-right: 30px;
+    }
+
+    i {
+      position: absolute;
+      right: 12px;
+      top: 0;
+      bottom: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      pointer-events: none;
+    }
+  }
+}

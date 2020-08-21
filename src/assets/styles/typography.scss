@@ -1,0 +1,69 @@
+@import "./mixins";
+@import "./variables";
+
+.font-secondary {
+  font-family: 'Roboto Slab', Roboto, sans-serif;
+}
+
+.text-large, .text-xlarge, .text-xxlarge, .text-xxxlarge {
+  font-family: 'Roboto Slab', Roboto, sans-serif;
+  font-weight: 400;
+}
+
+.text-small {
+  @include textSmall;
+}
+
+.text-normal {
+  @include textNormal;
+}
+
+.text-medium {
+  @include textMedium;
+}
+
+.text-large {
+  @include textLarge;
+}
+
+.text-xlarge {
+  @include textXLarge;
+}
+
+.text-xxlarge {
+  @include textXXLarge;
+}
+
+.text-xxxlarge {
+  @include textXXXLarge;
+}
+
+.text-center {
+  @include textCenter;
+}
+
+.text-left {
+  @include textLeft;
+}
+
+.text-bold {
+  @include textBold;
+}
+
+.text-upper {
+  @include textUpper;
+}
+
+.text-error {
+  @include textError;
+}
+
+.text-gray {
+  @include textGray;
+}
+
+.text-gray-title {
+  @extend .text-upper;
+  @extend .text-gray;
+  @extend .text-small;
+}

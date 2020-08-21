@@ -1,0 +1,22 @@
+$daySize: 3.5rem;
+
+.sw-date-picker, .react-datepicker__current-month {
+  font-size: 1.6rem;
+  line-height: 1.4;
+}
+
+.react-datepicker__day, .react-datepicker__day-name {
+  width: $daySize;
+  line-height: $daySize;
+}
+
+.react-datepicker__navigation {
+  border-width: 0.65rem;
+}
+
+.react-datepicker__input-container {
+  width: 100%;
+  input {
+    padding-left: 1rem;
+  }
+}
